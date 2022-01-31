@@ -1,127 +1,70 @@
-![react-starter](https://user-images.githubusercontent.com/33935506/36640446-894a1a78-1a27-11e8-970a-6cbf95d76799.png)
+# Getting Started with Create React App
 
-# React Starter
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-A basic template that consists of the essential elements that are required to start building a React (v16.4) application using Webpack (v4).
+## Available Scripts
 
-The template consists of:
+In the project directory, you can run:
 
-* a typcial project layout structure
-* babel setup and configuration
-* webpack setup and configuration
-* eslint setup and configuration
-* SCSS setup and configuration
-* the main React components to get started
+### `npm start`
 
----
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-## Developed With
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-* [Node.js 8.11](https://nodejs.org/en/) - Javascript runtime
-* [React 16.6](https://reactjs.org/) - A javascript library for building user interfaces
-* [Babel 6.26](https://babeljs.io/) - A transpiler for javascript
-* [Webpack 4.x](https://webpack.js.org/) - A module bundler
-* [SCSS](http://sass-lang.com/) - A css metalanguage
+### `npm test`
 
----
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-## Getting Started
+### `npm run build`
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-### Prerequisites
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-The following software is required to be installed on your system:
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-* Node 8.x
-* Npm 3.x
+### `npm run eject`
 
-Type the following commands in the terminal to verify your node and npm versions
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-  ```bash
-  node -v
-  npm -v
-  ```
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-### Install
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-* Install node modules
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-   ```bash
-   cd react-starter
-   npm install
-   ```
+## Learn More
 
-### Build
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-#### Build Application
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-dev | prod
-:---: | :---:
-npm run build:dev | npm run build:prod
+### Code Splitting
 
-#### Build Application And Watch For Changes
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-dev | prod
-:---: | :---:
-npm run build:dev:watch | npm run build:prod:watch
+### Analyzing the Bundle Size
 
-#### Build Application With BundleAnalayzer Plugin Included
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-dev | prod
-:---: | :---:
-npm run build:dev:bundleanalyze | npm run build:prod:bundleanalyze
+### Making a Progressive Web App
 
-After running the above command, a browser window will open displaying an interactive graph resembling the following image:
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-![bundle-analyzer](https://user-images.githubusercontent.com/33935506/36382812-eadf199e-1592-11e8-9681-cf5ccf67951f.png)
+### Advanced Configuration
 
-### Run ESlint
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-#### Lint Project Using ESLint
+### Deployment
 
-  ```bash
-  npm run lint
-  ```
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-#### Lint Project Using ESLint, and autofix
+### `npm run build` fails to minify
 
-  ```bash
-  npm run lint:fix
-  ```
-
-### Run
-
-#### Run Start
-
-This will run the _'serve:dev'_ npm task
-
-```bash
-npm start
-```
-
-#### Run Dev Server
-
-```bash
-npm run serve:dev
-```
-
-#### Run Dev Server With Dashboard
-
-```bash
-npm run serve:dev:dashboard
-```
-
-The above command will display a dashboard view in your console resembling the following image:
-
-![webpack-dashboard](https://user-images.githubusercontent.com/33935506/36382813-eb10b0a8-1592-11e8-9506-fd25db65a258.png)
-
-#### Run Prod Server
-
-This command will build application using production settings and start the application using _live-server_
-
-```bash
-npm run serve:prod
-```
-
----
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

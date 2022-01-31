@@ -1,28 +1,17 @@
-// // PACKAGE DEPENDENCIES
-// import React from 'react';
-// import ReactDOM from 'react-dom';
-
-// // COMPONENTS
-
-// import Search from './components/pages/Search';
-
-// // STYLES
-
-// import 'normalize.css';
-import './sass/main_global.scss';
-
-
-// ReactDOM.render(<Search />, document.getElementById('root'));
 import React from 'react';
-import { render } from 'react-dom';
-import { Router } from 'react-router-dom';
-import Main from './components/main_components/Main';
-import history from './history';
+import ReactDOM from 'react-dom';
+import './index.css';
+import App from './App';
+import reportWebVitals from './reportWebVitals';
 
-// console.log(App);
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById('root')
+);
 
-render((
-    <Router history={history}>
-        <Main />
-    </Router>
-), document.getElementById('root'));
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+reportWebVitals();
