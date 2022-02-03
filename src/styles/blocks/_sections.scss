@@ -1,0 +1,286 @@
+//---------------------------------------------sections
+.section {
+	position: relative;
+
+	width: 100%;
+
+	padding: 6rem $gl_indent;
+
+	font-size: 1rem;
+
+	&.indent_mod {
+		padding: 4.4rem $gl_indent;
+	}
+
+	&.indent_2_mod {
+		@include bp($point_2, min) {
+			padding: 11rem $gl_indent;
+		}
+
+		@include bp($point_3) {
+			padding: 6rem $gl_indent;
+		}
+	}
+
+	&.bg_mod {
+		background: linear-gradient(0deg, $white 38%, #f9f9f9 100%);
+	}
+
+	&.bg_2_mod {
+		background-color: $gray_4;
+	}
+
+	&.border_mod {
+		border-top: 1px solid $gray_6;
+	}
+
+	&.hero_mod {
+		@include bp($point_4, min) {
+			min-height: 52.2rem;
+		}
+		@include bp($point_4 - 1) {
+			min-height: calc(#{var(--full-screen)} - #{$height_header});
+		}
+	}
+
+	&.flex_mod {
+		@extend %global_flex_block_row_wrap_flex-start_center;
+	}
+
+	&.bg_3_mod {
+		background-color: $green;
+	}
+
+	&.indent_3_mod {
+		@include bp($point_4, min) {
+			padding: 10rem $gl_indent;
+		}
+	}
+
+	&.indent_4_mod {
+		@include bp($point_4, min) {
+			padding: 4.2rem $gl_indent 18rem;
+		}
+	}
+}
+
+.section_in {
+	max-width: $page_width;
+	width: 100%;
+	margin: 0 auto;
+
+	&.width_mod {
+		max-width: $page_width_3;
+	}
+
+	&.center_mod {
+		text-align: center;
+	}
+
+	&.color_mod {
+		color: $white;
+	}
+
+	&.flex_mod {
+		@extend %global_flex_block_row_wrap_flex-end;
+	}
+}
+
+.section_title_w {
+	position: relative;
+	width: 100%;
+
+	&:not(:last-child) {
+		margin-bottom: 2.4rem;
+	}
+}
+
+.section_title {
+	width: 100%;
+
+	font-family: $mark_pro;
+	font-weight: 800;
+	line-height: 1.4;
+	color: $black_2;
+
+	@include bp($point_2, min) {
+		font-size: 3.6em;
+	}
+
+	@include bp($point_3) {
+		font-size: 2.4rem;
+	}
+
+	&.lg_mod {
+		@include bp($point_4, min) {
+			font-size: 4.2rem;
+			line-height: 1.3;
+		}
+	}
+
+	&.font_mod {
+		font-family: $font_1;
+	}
+
+	&.color_gr_mod {
+		color: $green;
+	}
+
+	&.center_lvl_mod {
+		text-align: center;
+	}
+
+	&.offset_mod {
+		margin: 0 0 1rem;
+	}
+
+	&.decor_mod {
+		@include bp($point_2, min) {
+			position: relative;
+
+			display: inline;
+			width: auto;
+
+			&::before {
+				position: absolute;
+				left: -4px;
+				right: -4px;
+				bottom: -1rem;
+
+				content: '';
+
+				height: 3.4rem;
+
+				background-color: $green;
+				opacity: .1;
+			}
+		}
+	}
+
+	&.lg_2_mod {
+		@include bp($point_4, min) {
+			font-size: 4.8rem;
+		}
+
+		@include bp($point_4 - 1) {
+			font-size: 3.6rem;
+		}
+	}
+
+	&.color_2_mod {
+		color: $white;
+	}
+
+	&.offset_2_mod {
+		margin: 0 0 2rem;
+	}
+}
+
+.section_descr {
+	width: 100%;
+
+	color: $gray;
+	font-size: 1.6rem;
+	line-height: 1.5;
+
+	&.lg_mod {
+		@include bp($point_4, min) {
+			font-size: 2rem;
+			line-height: 1.6;
+		}
+	}
+
+	&.sm_mod {
+		font-size: 1.2rem;
+	}
+
+	p {
+		&:not(:last-child) {
+			margin-bottom: 2rem;
+		}
+	}
+}
+
+.section_subtitle {
+	font-weight: 400;
+	color: $black_2;
+
+	@include bp($point_4, min) {
+		font-size: 3.6rem;
+	}
+	@include bp($point_4 - 1) {
+		font-size: 2.4rem;
+	}
+
+	&.offset_mod {
+		@include bp($point_4, min) {
+			margin: 0 0 5.2rem;
+		}
+		@include bp($point_4 - 1) {
+			margin: 0 0 3.2rem;
+		}
+	}
+}
+
+.section_nav {
+}
+
+.section_nav_list {
+	@extend %global_flex_block_row_wrap_center_center;
+
+	margin: 0 -1.2rem -2rem 0;
+}
+
+.section_nav_item {
+	padding: 0 1.2rem 2rem 0;
+}
+
+.section_nav_link {
+	position: relative;
+
+	display: block;
+	padding: 0 1rem .6rem;
+
+	font-weight: 800;
+	font-size: 1.8rem;
+	font-family: $mark_pro;
+	color: $black_2;
+
+	span {
+		transition: opacity .3s;
+	}
+
+	.section_nav_item:not(:last-child):not(:first-child) &::after {
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%);
+
+		width: 100%;
+		height: 3px;
+
+		content: '';
+
+		transition: background-color .3s;
+	}
+
+	.section_nav_item:last-child &,
+	.section_nav_item:first-child & {
+		padding: 0 0 .6rem;
+	}
+
+	&.active_mod:after {
+		background-color: $green;
+	}
+
+	&.active_mod {
+		pointer-events: none;
+	}
+
+	&:hover, &:focus {
+		text-decoration: none;
+		&:after {
+			background-color: $green;
+		}
+	}
+}

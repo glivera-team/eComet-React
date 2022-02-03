@@ -1,0 +1,229 @@
+//------------------------------------------------------------layout
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+
+	height: $height_header;
+	padding: 0 $gl_indent;
+	width: 100%;
+
+	font-size: 1rem;
+
+	background-color: $white;
+
+	@include z-index(header);
+}
+
+.header_in {
+	max-width: $page_width_2;
+	margin: 0 auto;
+	width: 100%;
+}
+
+.header_top {
+	@extend %global_flex_block_row_nowrap_center_center;
+
+	height: 5.6rem;
+
+	&::after {
+		z-index: -1;
+		position: absolute;
+		left: 0;
+		top: 0;
+
+		width: 100%;
+		height: 5.6rem;
+
+		background-color: $black;
+		content: '';
+	}
+}
+
+.header_top_title {
+
+	font-weight: 500;
+	color: $white;
+	font-family: $sf_pro_text;
+
+	@include bp($point_2, min) {
+		margin: 0 4rem 0 0;
+		font-size: 1.8rem;
+	}
+	@media (min-width: $point_4) and (max-width: $point_3) {
+		margin: 0 2rem 0 0;
+		font-size: 1.2rem;
+	}
+	@include bp($point_4 - 1) {
+		margin: 0 2rem 0 0;
+		font-size: 1rem;
+	}
+}
+
+.header_bottom {
+	@extend %global_flex_block_row_wrap_flex-start_center;
+
+	position: relative;
+
+	height: 8rem;
+}
+
+.header_logo_w {
+	display: block;
+
+	@include bp($point_2, min) {
+		margin-left: 1rem;
+		width: 16.8rem;
+		height: 5rem;
+	}
+	@include bp($point_3) {
+		width: 13rem;
+		height: 3.8rem;
+	}
+
+}
+
+.header_logo {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+
+//---------------------------------------------trigger
+@mixin user_menu_butt_line {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	width: 100%;
+	height: .3rem;
+	margin-top: -.2rem;
+	background: black;
+}
+
+.menu_trigger {
+	z-index: 210;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+
+	right: 0;
+	display: none; // hidden on wide screens
+	height: 2.6rem;
+	width: 3rem;
+	text-transform: uppercase;
+
+	color: transparent;
+	cursor: pointer;
+
+	@include bp($point_3) {
+		display: block; // appear on tablets
+	}
+
+	&:before {
+		content: '';
+		transform: translate(0, -.8rem);
+		transition: all .3s ease;
+
+		@include user_menu_butt_line;
+	}
+	&:after {
+		content: '';
+		transform: translate(0, .8rem);
+		transition: all .3s ease;
+
+		@include user_menu_butt_line;
+	}
+	&.active_mod {
+		&:before {
+			transform: (rotate(45deg) translate(0, 0));
+		}
+
+		&:after {
+			transform: (rotate(-45deg) translate(0, 0));
+		}
+	}
+}
+
+.menu_trigger_decor {
+	transition: all .3s ease;
+
+	.active_mod & {
+		opacity: 0;
+		transform: translate(100%, 0);
+	}
+
+	@include user_menu_butt_line;
+}
+
+//---------------------------------------------trigger###
+
+
+.header_menu {
+	@extend %global_flex_block_row_wrap_flex-start_center;
+
+	margin: 0 0 0 auto;
+
+	@include bp($point_2, min) {
+		display: flex !important;
+	}
+
+	@include bp($point_3) {
+		position: absolute;
+		left: -$gl_indent;
+		top: 100%;
+
+		display: none;
+		justify-content: center;
+		width: 100vw;
+		padding: 1rem 0 4rem;
+
+		background: $white;
+	}
+}
+
+.header_nav {
+	@include bp($point_3) {
+		width: 100%;
+	}
+}
+
+.header_nav_list {
+	@extend %global_flex_block_row_wrap_flex-start_center;
+
+	@include bp($point_2, min) {
+		margin: 0 4rem 0 0;
+	}
+	@include bp($point_3) {
+		justify-content: center;
+		text-align: center;
+		margin: 0 0 2rem;
+	}
+}
+
+.header_nav_item {
+	@include bp($point_3 - 1) {
+		width: 100%;
+	}
+
+	& + & {
+		@include bp($point_2, min) {
+			margin-left: 4rem;
+		}
+		@include bp($point_3) {
+			margin-top: 2rem;
+		}
+	}
+}
+
+.header_nav_link {
+	color: $gray;
+
+	font-size: 1.6rem;
+
+	@include bp($point_3) {
+		display: block;
+	}
+}
+
+//------------------------------------------------------------layout###

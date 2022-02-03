@@ -1,0 +1,90 @@
+// images
+.cover_img {
+	display: block;
+	width: 100%;
+	height: 100%;
+
+	object-fit: cover;
+
+	.hero_bg.v2_mod & {
+		object-fit: contain;
+		object-position: 0% 100%;
+	}
+}
+
+.inner_img {
+	display: block;
+	max-width: 100%;
+	max-height: 100%;
+}
+
+// buttons
+.btn_base {
+	@extend %btn_size_1;
+	@extend %green_btn_1;
+}
+
+.btn_base.mob_size_mod {
+	@extend %btn_size_4;
+}
+
+.btn_v2 {
+	@extend %btn_size_2;
+	@extend %green_btn_1;
+}
+
+.btn_v3 {
+	@extend %btn_size_3;
+	@extend	%white_btn_1;
+
+	&.case_mod {
+		text-transform: uppercase;
+	}
+}
+
+.btn_v4 {
+	@extend %btn_size_3;
+	@extend %green_btn_1;
+}
+
+
+
+.btn_wrap {
+	&.center_mod {
+		@extend %global_flex_block_row_wrap_center;
+	}
+}
+
+
+// social
+.social_list {
+	@extend %global_flex_block_row_wrap_center_center;
+}
+
+.social_item {
+	margin: 0 2.2rem 0 0;
+
+	&:last-child {
+		margin: 0;
+	}
+}
+
+.social_link {
+	display: block;
+	width: 2.4rem;
+	height: 2.4rem;
+
+	transition: color .3s;
+
+	&.linkedin_mod {
+		color: #0274b3;
+	}
+
+	&.twitter_mod {
+		color: #29a8df;
+	}
+
+	&:hover, &:focus {
+		color: $green !important;
+	}
+}

@@ -1,0 +1,105 @@
+@mixin st_btn() {
+	display: inline-flex;
+	justify-content: center;
+	// align-items: center;
+
+	text-align: center;
+	white-space: nowrap;
+
+	cursor: pointer;
+
+	&:hover, &:focus {
+		text-decoration: none;
+	}
+
+}
+
+//color extends
+%green_btn_1 {
+	font-family: $eina_02;
+	font-weight: 700;
+	color: $white;
+	background: $green;
+	transition: .3s ease;
+	text-transform: uppercase;
+
+	@include st_btn();
+
+	&:hover {
+		background: darken($green, 10%);
+	}
+}
+
+%white_btn_1 {
+	font-family: $eina_02;
+	font-weight: 700;
+	color: $green;
+	background: $white;
+	transition: .3s ease;
+
+	@include st_btn();
+
+	&:hover {
+		background: darken($white, 10%);
+	}
+}
+
+//size extends
+%btn_size_1 {
+	height: 4rem;
+	min-width: 17.2rem;
+	padding: 0 1.2rem;
+
+	line-height: 4rem;
+	font-size: 1.4rem;
+
+	border-radius: .8rem;
+
+	@include bp($point_4 - 1) {
+		// line-height: 4.2rem;
+	}
+}
+
+%btn_size_2 {
+	height: 4rem;
+	min-width: 17.2rem;
+	padding: 0 2.34rem;
+
+	line-height: 4rem;
+	font-size: 1.4rem;
+
+	border-radius: .8rem;
+
+	@include bp($point_4 - 1) {
+		// line-height: 4.2rem;
+	}
+}
+
+%btn_size_3 {
+	height: 5rem;
+	min-width: 18rem;
+	padding: 0 2rem;
+
+	line-height: 5rem;
+	font-size: 1.6rem;
+
+	border-radius: .8rem;
+
+	@include bp($point_4 - 1) {
+		// line-height: 5.4rem;
+	}
+}
+
+%btn_size_4 {
+	@include bp($point_4 - 1) {
+		height: 3rem;
+		min-width: 12.2rem;
+		padding: 0 1rem;
+
+		// line-height: 3.2rem;
+		line-height: 3rem;
+		font-size: 1rem;
+
+		border-radius: .8rem;
+	}
+}

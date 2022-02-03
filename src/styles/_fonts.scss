@@ -1,0 +1,16 @@
+@include font_face('Eina01-Regular', 'Eina01', $font_path, 400);
+@include font_face('Eina01-RegularItalic', 'Eina01', $font_path, 400, italic);
+@include font_face('Eina01-Bold', 'Eina01', $font_path, 700);
+@include font_face('Eina01-BoldItalic', 'Eina01', $font_path, 700, italic);
+@include font_face('Eina01-SemiBold', 'Eina01', $font_path, 600);
+@include font_face('Eina01-SemiboldItalic', 'Eina01', $font_path, 600, italic);
+@include font_face('Eina02-SemiBold', 'Eina02', $font_path, 600);
+@include font_face('Eina02-SemiboldItalic', 'Eina02', $font_path, 600, italic);
+@include font_face('Eina02-Bold', 'Eina02', $font_path, 700);
+@include font_face('Eina02-BoldItalic', 'Eina02', $font_path, 700, italic);
+@include font_face('MarkPro-Bold', 'MarkPro', $font_path, 700);
+@include font_face('MarkPro-Heavy', 'MarkPro', $font_path, 800);
+@include font_face('Roboto-Regular', 'Roboto', $font_path, 400);
+@include font_face('Roboto-Italic', 'Roboto', $font_path, 400, italic);
+@include font_face('SFProText-Medium', 'SFProText', $font_path, 500);
+@include font_face('SFProText-MediumItalic', 'SFProText', $font_path, 500, italic);

@@ -1,0 +1,312 @@
+.preview_item_info {
+	&.offset_mod {
+		@include bp($point_4, min) {
+			margin: 0 0 3.4rem;
+		}
+	}
+}
+.preview_item_info_text {
+	&.size_mod {
+		@include bp($point_4, min) {
+			font-size: 2rem;
+		}
+	}
+}
+
+.blog_text {
+	p, dl {
+		font-size: 2rem;
+		line-height: 3.4rem;
+
+		margin: 0 0 3.2rem;
+
+		@include bp($point_4) {
+			font-size: 1.6rem;
+			line-height: 2.8rem;
+		}
+	}
+
+
+	dl {
+		&:last-child {
+			margin: 0;
+		}
+	}
+
+	dt {
+		font-weight: bold;
+	}
+
+	dd {
+		margin: 0 0 3rem;
+
+		&:last-child, p:last-child {
+			margin: 0;
+		}
+	}
+
+	span, strong {
+		display: block;
+	}
+
+	h4 {
+		font-size: 2.4rem;
+		margin: 0 0 3.4rem;
+	}
+
+	a {
+		color: $green;
+		text-decoration: underline;
+	}
+}
+
+// banner
+
+.banner_w {
+	position: relative;
+
+	min-height: 33.4rem;
+	margin: 0 0 3.2rem;
+
+	background-color: $green;
+	border-radius: 1rem;
+
+	overflow: hidden;
+
+	@include bp($point_3) {
+		border: 1px solid $green;
+	}
+}
+
+.banner_content {
+	@extend 	%global_flex_block_column_wrap_flex-start;
+
+	color: $white;
+
+	padding: 4rem 4rem 3.6rem 4rem;
+
+	@include bp($point_2, min) {
+		width: 58%;
+	}
+
+	@include bp($point_3) {
+		align-items: center;
+	}
+}
+
+.banner_title {
+	font-size: 2.4rem;
+	line-height: 1.4;
+
+	margin: 0 0 2rem;
+}
+
+.banner_descr {
+	font-size: 1.6rem;
+	line-height: 3rem;
+
+	margin: 0 0 3.2rem;
+}
+
+.banner_img_w {
+	bottom: -3rem;
+	right: -11.6rem;
+
+	width: 51rem;
+
+	@include bp($point_2, min) {
+		position: absolute;
+	}
+
+	@include bp($point_3) {
+		max-width: 80rem;
+		width: 100%;
+
+		margin: 0 auto;
+	}
+}
+
+.banner_img {
+	display: block;
+
+	width: 100%;
+	height: 100%;
+
+	object-fit: contain;
+}
+
+//********
+
+.blog_text_block {
+	width: 90%;
+
+	font-size: 2rem;
+	line-height: 3.4rem;
+
+	margin: 0 auto 6rem;
+
+	@include bp($point_3) {
+		font-size: 1.6rem;
+		line-height: 2.8rem;
+	}
+}
+
+// author blog
+
+.blog_author{
+	position: relative;
+
+	&.article_mod {
+		@extend %global_flex_block_row_wrap_flex-start_center;
+
+		width: 100%;
+		max-width: 106.8rem;
+		height: 12.6rem;
+
+		margin: 0;
+		padding: 0 5rem 0 0;
+
+		border-radius: 1rem;
+		border: none;
+		background-color: $gray_4;
+		overflow: visible;
+
+
+		@include bp($point_1) {
+			max-width: 94.8rem;
+			width: 100%;
+			margin: 0 auto;
+		}
+
+		@include bp($point_3) {
+			flex-direction: column;
+
+			height: auto;
+
+			padding: 3rem 2rem;
+		}
+	}
+}
+
+.blog_author_img_w {
+	width: 9.4rem;
+	height: 9.4rem;
+
+	border: 4px solid $white;
+	border-radius: 50%;
+
+	overflow: hidden;
+
+	@include bp($point_2, min) {
+		transform: translate(-4.7rem, 0);
+	}
+
+	@include bp($point_3) {
+		width: 12rem;
+		height: 12rem;
+
+		margin: 0 0 2rem;
+	}
+}
+
+.blog_author_name{
+
+	&.article_mod {
+		font-size: 2rem;
+		margin: 0 6.2rem 0 -3.4rem;
+
+		@include bp($point_3) {
+			margin: 0 0 3rem;
+		}
+	}
+}
+
+.blog_date_list {
+	@extend %global_flex_block_row_wrap_flex-start_center;
+	font-size: 2rem;
+	font-weight: 700;
+
+	@include bp($point_3) {
+		font-size: 1.6rem;
+
+		margin: 0 0 3rem;
+	}
+}
+
+.blog_date_list_item:not(:last-child) {
+	margin: 0 3.2rem 0 0;
+
+	@include bp($point_3) {
+		margin: 0 1.8rem 0 0;
+	}
+
+	& span {
+		margin: 0 2.8rem 0 0;
+
+		@include bp($point_3) {
+			margin: 0 1.8rem 0 0;
+		}
+	}
+
+	@include bp($point_3) {
+		&:before {
+			opacity: 0;
+		}
+	}
+}
+
+.blog_date_list_item {
+	position: relative;
+
+	&:before {
+		position: absolute;
+		top: 0.8rem;
+		left: -3.8rem;
+
+		width: 1.2rem;
+		height: 1.2rem;
+
+		content: '';
+
+		background: $black;
+		border-radius: 50%;
+		opacity: 1;
+
+		@include bp($point_3) {
+			width: .8rem;
+			height: .8rem;
+
+			left: -2.2rem;
+		}
+	}
+}
+
+.blog_check {
+	@extend %global_flex_block_row_wrap_flex-start_center;
+	margin: 0 0 0 auto;
+	color: $green;
+
+	@include bp($point_3) {
+		margin: 0 auto;
+	}
+}
+
+.blog_check_link {
+	font-size: 2rem;
+	font-weight: 700;
+	color: green;
+
+	margin: 0 .6rem 0 0;
+
+	&:hover {
+		text-decoration: none;
+	}
+
+	@include bp($point_3) {
+	font-size: 1.6rem;
+	}
+}
+
+.pos_mod {
+	transform: rotate(-90deg) scale(1.2);
+}

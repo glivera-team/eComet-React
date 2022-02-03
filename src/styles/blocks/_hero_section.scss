@@ -1,0 +1,113 @@
+.hero_bg {
+	z-index: 1;
+
+	position: absolute;
+
+	&:not(.v2_mod) {
+		top: 0;
+		right: 0;
+
+		width: 56%;
+		height: 100%;
+		
+		clip-path: polygon(20.5% 0, 100% 0%, 100% 100%, 0 100%);
+		filter: drop-shadow(0 4px 4px rgba(0, 0, 0, .25));
+	}
+
+	&.v2_mod {
+		bottom: 0;
+		right: -6rem;
+
+		width: 52%;
+		height: 46rem;
+	}
+
+	@include bp($point_3) {
+		display: none;
+	}
+}
+
+.hero_content {
+	z-index: 2;
+
+	position: relative;
+
+	@include bp($point_2, min) {
+		width: 100%;
+		max-width: 51.6rem;
+	}
+
+	@include bp($point_3) {
+		margin: 0 auto;
+		text-align: center;
+	}
+}
+
+.hero_text {
+	width: 100%;
+	&:not(:last-child) {
+		margin-bottom: 5rem;
+	}
+}
+
+.hero_form {
+	border-radius: .8rem;
+	background-color: rgba($green, .1);
+
+	overflow: hidden;
+
+	.form_field {
+		@include bp($point_6, min) {
+			width: 60.8%;
+		}
+	}
+
+	@include bp($point_2, min) {
+		@include flex_block(row, wrap, flex-start, stretch);
+		width: 100%;
+		max-width: 35rem;
+	}
+
+	@media (max-width: $point_3) and (min-width: $point_6) {
+		@include flex_block(row, wrap, flex-start, stretch);
+		margin: 0 auto;
+		max-width: 35rem;
+	}
+
+	@include bp($point_6 - 1) {
+		display: block;
+		margin: 0 auto;
+	}
+}
+
+.hero_form_btn_w {
+	@include bp($point_6, min) {
+		width: 100% - 60.8%;
+	}
+}
+
+.hero_form_btn {
+	width: 100%;
+	height: 100%;
+
+	font-family: $eina_02;
+	font-weight: 700;
+	color: $white;
+	font-size: 1.6rem;
+	text-transform: uppercase;
+	height: 5rem;
+	line-height: 5rem;
+
+	background-color: $green;
+	transition: background .3s ease;
+
+	@include st_btn();
+
+	&:hover {
+		background: darken($green, 10%);
+	}
+
+	@include bp($point_4 - 1) {
+		line-height: 5.4rem;
+	}
+}
