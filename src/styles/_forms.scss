@@ -1,0 +1,89 @@
+//-------------------------------------------------------inputs and selects
+%form_field_default {
+	display: block;
+	width: 100%;
+	height: $input_height;
+	padding: $input_offset;
+	font-size: $input_font_size;
+	font-family: $eina_02;
+	font-weight: 600;
+	color: $input_text_color;
+	box-shadow: none;
+	border: none;
+	border-radius: $input_radius;
+	background-color: #fff0;
+
+	&::-webkit-input-placeholder {
+		color: $input_placeholder_color;
+	}
+
+	&::-moz-placeholder {
+		color: $input_placeholder_color;
+	}
+
+	&:-ms-input-placeholder {
+		color: $input_placeholder_color;
+	}
+
+}
+
+%form_field_default_hover {}
+
+// %form_field_default_active {
+// 	box-shadow: 0 0 0 1px $input_border_color_active;
+// }
+
+.form_cell,
+.form_field {
+	&.hidden_field {
+		display: none;
+	}
+
+	&.form_cell_v1_mod {}
+}
+
+.form_cell_title,
+.form_field_label {
+
+	&.hline_hide_mod,
+	&.hidden_mod {
+		display: none;
+	}
+
+	&.form_v1_mod {}
+
+}
+
+.form_field_wrap {
+	position: relative;
+
+	&.form_v1_mod {}
+
+}
+
+.form_field {
+
+	&.default_mod,
+	&_input {
+		@extend %form_field_default !optional;
+
+		&:focus {
+			@extend %form_field_default_active !optional;
+		}
+
+		&:hover {
+			@extend %form_field_default_hover !optional;
+		}
+	}
+
+	&.textarea_mod_1 {}
+
+}
+
+//---------------------------------------------inputs and selects###
+
+//---------------------------------------------checkboxes and radio-buttons
+
+// copy/paste from helpers/components/forms/_form.scss
+
+//---------------------------------------------checkboxes and radio-buttons###
