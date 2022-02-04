@@ -1,4 +1,5 @@
 import React from 'react';
+import logo from '../i/logo.png';
 
 const Header = () => {
   return (
@@ -7,7 +8,7 @@ const Header = () => {
 				<div className="header_top">
 					<div className="header_top_title">Do you need more traffic to your AfterSell Store ?</div><a className="btn_base mob_size_mod" href="#s">CHECK OUT AFTERS</a>
 				</div>
-				<div className="header_bottom"><a className="header_logo_w" href="#s"><img className="header_logo" src="i/Logo.png" alt="Logo"/></a>
+				<div className="header_bottom"><a className="header_logo_w" href="#s"><img className="header_logo" src={logo} alt="Logo"/></a>
 					<div className="menu_trigger menuTrigger"><span className="menu_trigger_decor"></span></div>
 					<div className="header_menu">
 						<nav className="header_nav">
