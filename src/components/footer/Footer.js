@@ -1,8 +1,6 @@
 import React from 'react';
 import FooterList from './FooterList';
 import FooterColTitle from './FooterColTitle'
-// import FooterLogoImg from 'i/logo.png';
-// import FooterList from './FooterList';
 import FooterLogoImg from '../../i/logo.png';
 
 const Footer = () => {
@@ -10,7 +8,7 @@ const Footer = () => {
 	return (
 		<footer className="footer">
 			<div className="footer_in">
-			<div className="footer_top"><a className="footer_logo_w" href="#"><img className="footer_logo" src='' alt="Logo" /></a>
+			<div className="footer_top"><a className="footer_logo_w" href="#"><img className="footer_logo" src= { FooterLogoImg } alt="Logo" /></a>
 				<div className="footer_row">
 					<div className="footer_content">
 						<div className="footer_descr">
