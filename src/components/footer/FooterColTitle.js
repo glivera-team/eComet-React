@@ -1,4 +1,5 @@
 import React from 'react';
+import spriteIcon from '../../i/sprite/sprite.svg';
 
 const FooterColTitle = ({ title }) => {
     return (
