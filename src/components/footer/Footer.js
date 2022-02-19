@@ -2,6 +2,8 @@ import React from 'react';
 import FooterList from './FooterList';
 import FooterColTitle from './FooterColTitle'
 // import FooterLogoImg from 'i/logo.png';
+// import FooterList from './FooterList';
+import FooterLogoImg from '../../i/logo.png';
 
 const Footer = () => {
 
